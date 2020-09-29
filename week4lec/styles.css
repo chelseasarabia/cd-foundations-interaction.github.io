@@ -1,0 +1,74 @@
+html, body, {
+	margin:0;
+	top:0;
+	left:0;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#topnav {
+	width:100%;
+	background-color:white;
+	text-align: center;
+	position:fixed;
+	top: 0;
+	border-bottom: 0.1em solid black;
+	box-shadow: 0em 0em 2em #ccc;
+}
+
+#topnav div {
+	display: inline-block;
+	margin: 0% 5%;
+	padding: 0% 5%;
+	transition: 0.5s all ease-in-out;
+}
+
+#topnav div: hover {
+	background-color: #f2f2f2;
+}
+
+#topnav h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 0.1em;
+	margin: 0% 10%;
+	padding: 10%;
+	width: 100%;
+	border-radius: 0.5em;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+
+#topnav h1:hover {
+	font-weight: 400;
+}
+
+.aligner {
+	width: 80%;
+}
+
+#sidenav {
+	display: none;
+}
+
+.gallery {
+	width: 50%;
+	padding-top: 10%;
+	margin: auto;
+}
+
+.post img {
+	width: 100%;
+}
+
+.post h3 {
+	font-size: 5em;
+	margin-bottom: -5em;
+	font-weight: 300;
+	color: #1d1d1d;
+	z-index: 100;
+}
+
+
+
+

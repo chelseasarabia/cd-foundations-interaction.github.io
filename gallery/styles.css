@@ -1,0 +1,20 @@
+html, body { 
+	margin:0;
+	top:0;
+	left:0;
+	font-family: 'Inter', sans-serif;
+ }
+
+ #topnav {
+ 	width: 100%;
+ 	background-color: white;
+ 	text-align: center;
+ 	position: fixed;
+ 	top: 0;
+ }
+
+ #topnav div {
+	display: inline-block;
+	margin:0% 5%;
+	padding: 0% 5%;
+}
