@@ -1,0 +1,238 @@
+html, body {
+	margin: 1em 4em 4em 4em;
+	top: 0;
+	left: 0;
+	font-family: 'DM Mono', monospace;
+	font-family: 'Epilogue', sans-serif;
+	background-color: #d2cac8; 
+}
+
+#title h1 {
+	width: 100%;
+	top: 0.2;
+	left: 0;
+	font-family: 'Epilogue', sans-serif; 
+	font-size: 27pt;
+	font-weight: 900; 
+	color: white;
+	text-align: center;
+	position: fixed; 
+	background-color: #d2cac8; 
+}
+
+#title h1:hover {
+	filter: blur(3px); 
+	transition: 0.3s all ease-in-out;
+	cursor:pointer;
+}
+
+#blur {
+	color: #faf9ed;
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+}
+
+#content {
+	top: 20em;
+	margin-top:100px;
+	left: 0;
+	float: center;
+	display: inline;
+	width: 50%;
+}
+
+p.line {
+	position: relative;
+	top: 50%;
+	color: white;
+	width: 25em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(255, 255, 255, 0.75);
+	font-family: 'DM Mono', monospace;
+	font-size: 12pt;
+	white-space: nowrap;
+	overflow: hidden; 
+	transform: translateY(-50%);
+}
+
+/* ANIMATION!! */
+
+.anim-typewriter {
+	animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter { 
+	from {
+		width:0;
+	}
+	to {
+		width: 25em;
+	}
+}
+
+@keyframes blinkTextCursor {
+	from { 
+		border-right-color: rgba(255, 255, 255, 0.75); 
+	} 
+	to {
+		border-right-color: transparent;
+	}
+}
+
+/* more lyrics */
+
+.dashed {
+	margin-left: auto;
+	margin-right: auto;
+	top: 0; 
+	width: 200px;
+	height: 300px;
+	color: white;
+	padding: 1em 1em 1em 1em;
+	outline-style: dashed;
+	outline-width: 1.5px;
+	float: center;
+}
+
+p.lyrics {
+	font-family: 'Epilogue', sans-serif;
+	font-size: 15pt;
+	font-weight: 400;
+	color: white;
+	text-align: right; 
+	position: relative;
+	top:0;
+}
+
+p.lyrics:hover {
+	filter: blur(3px); 
+	transition: 0.3s all ease;
+	cursor:pointer;
+}
+
+p.morelyrics {
+	font-family: 'Epilogue', sans-serif;
+	font-weight: 500;
+	font-size: 15pt;
+	font-style: italic;
+	color: #cd7d64;
+	text-align: left; 
+	position: absolute;
+}
+
+p.morelyrics2 {
+	font-family: 'Epilogue', sans-serif;
+	font-weight: 500;
+	font-size: 15pt;
+	font-style: italic;
+	color: #c68696;
+	text-align: left; 
+	position: absolute;
+}
+
+p.morelyrics3 {
+	font-family: 'Epilogue', sans-serif;
+	font-weight: 500;
+	font-size: 15pt;
+	font-style: italic;
+	color: #848d58;
+	text-align: left; 
+	position: absolute;
+}
+
+p.line2 {
+	position: relative;
+	top: 50%;
+	color: white;
+	width: 15em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(255, 255, 255, 0.75);
+	font-family: 'DM Mono', monospace;
+	font-size: 12pt;
+	white-space: nowrap;
+	overflow: hidden; 
+	transform: translateY(-50%);
+}
+
+/* ANIMATION!! */
+
+.anim-typewriter2 {
+	animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter { 
+	from {
+		width:0;
+	}
+	to {
+		width: 15em;
+	}
+}
+
+@keyframes blinkTextCursor {
+	from { 
+		border-right-color: rgba(255, 255, 255, 0.75); 
+	} 
+	to {
+		border-right-color: transparent;
+	}
+}
+
+p.line3 {
+	position: relative;
+	top: 50%;
+	color: white;
+	width: 28em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(255, 255, 255, 0.75);
+	font-family: 'DM Mono', monospace;
+	font-size: 12pt;
+	white-space: nowrap;
+	overflow: hidden; 
+	transform: translateY(-50%);
+}
+
+/* ANIMATION!! */
+
+.anim-typewriter3 {
+	animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter { 
+	from {
+		width:0;
+	}
+	to {
+		width: 28em;
+	}
+}
+
+@keyframes blinkTextCursor {
+	from { 
+		border-right-color: rgba(255, 255, 255, 0.75); 
+	} 
+	to {
+		border-right-color: transparent;
+	}
+}
+
+#credit {
+	top: 0;
+	left: 0;
+	width: 100%;
+	float: center;
+	display: inline;
+	font-weight: 300;
+}
+
+a:link, a:visited {
+	color:white;
+	text-decoration:underline;
+}
+
+a:hover, a:active {
+	color:white;
+	font-style: italic;
+	text-decoration:none;
+
+}
