@@ -223,6 +223,7 @@ p.line3 {
 	float: center;
 	display: inline;
 	font-weight: 300;
+	color: white;
 }
 
 a:link, a:visited {
