@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<input placeholder="Enter your name" type='text' name='name'>
+	<div id='welcome'>Welcome!</div>
+	<div id='shapeshifter'>Hello!</div>
+	<input placeholder='What number are you?' type="text" name="guess">
+	<div id='result'>4</div>
+</body>
+<script type="text/javascript">
+	let name = document.querySelector('input[name="name"]')
+	let welcome = document.querySelector('#welcome')
+	let shapeshifter = document.querySelector('#shapeshifter')
+	let guess = document.querySelector('input[name="guess"]')
+	let result = document.querySelector('#result')
+
+	console.log(name)
+	console.log(welcome)
+	console.log(shapeshifter)
+	console.log(guess)
+	console.log(result)
+
+	name.onchange=function(){
+		welcome.innerHTML='Welcome to the best class ever ' + name.value + "!"
+	}
+</script>
+</html>

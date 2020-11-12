@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>group</title>
+</head>
+<style type="text/css">
+	html,body{
+		text-align:middle;
+		font-family: Helvetica Neue, sans-serif;
+	}
+	input, div {
+		margin: 2;
+	}
+
+	#shapeshifter {
+		width:3em;
+		height: 5em;
+		background-color: gold;
+	}
+
+</style>
+<body>
+
+<input placeholder='Enter your name' type="text" name="name">
+<div id='welcome'>2</div>
+<div id='shapeshifter'>3</div>
+<input placeholder='What number are you?' type="text" name="guess">
+<div>4</div>
+
+</body>
+
+<script>
+let name = document.querySelector('input[name="name"]')
+let welcome = document.querySelector('#welcome')
+let shapeshifter = document.querySelector('#shapeshifter')
+let guess = document.querySelector('input[name="guess"]')
+let result = document.querySelector('#result')
+
+console.log(name)
+console.log(welcome)
+console.log(shapeshifter)
+console.log(guess)
+console.log(result)
+
+name.onchange=function(){
+	welcome.innerHTML='Welcome to the best class ever ' + name.value
+}
+
+shapeshifter.onclick=function(){
+	if(shapeshifter.style.backgroundColor=='gold'){
+	shapeshifter.style.backgroundColor='black'
+		}else {
+			shapeshifter.style.backgroundColor=='gold'
+	}
+}
+
+shapeshifter.onmouseover=function(){
+	shapeshifter.innerHTML='Remember to vote!'
+}
+
+shapeshifter.onmouseover=function(){
+	shapeshifter.innerHTML='3$'
+</script>
+
+</html>
