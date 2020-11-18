@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>everything and nothing</title>
@@ -46,6 +46,7 @@
 		line-height: 100px;
 		display: flex;
 		color:#5C5E51;
+		cursor:pointer;
 	}
 	.nav {
 		position:fixed;
@@ -110,8 +111,18 @@
 </body>
 <!-- javascript -->
 <script type="text/javascript">
+head = document.querySelector('.head')
 button = document.querySelector('.button')
 main = document.querySelector('#main')
+
+head.onclick=function() {
+	console.log('click')
+	button.style.width='100vw'
+	button.style.height='100vh'
+	button.style.color='#E3E5D8'
+	button.style.cursor='default'
+	main.style.opacity='1'
+}
 
 button.onclick=function() {
 	button.style.width='100vw'
