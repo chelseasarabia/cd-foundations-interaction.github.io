@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>everything and nothing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://js.cx/libs/animate.js"></script>
+</head>
+<style type="text/css">
+	html, body {
+		background-color:#E3E5D8;
+		color: #5C5E51;
+		top:0;
+		left:0;
+		margin:0;
+		height:100%;
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		font-family: 'Karla', sans-serif;
+		font-family: 'Inconsolata', monospace;
+	}
+	.main h1 {
+		position: fixed;
+		width: 370px;
+		height: 42px;
+		left: 630px;
+		top: 115px;
+
+		font-family: Karla;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		line-height: 42px;
+		/* identical to box height */
+		display: flex;
+		align-items: center;
+
+		color: #5C5E51;
+	} 
+	.main p {
+		position: fixed;
+		width: 396px;
+		height: 57px;
+		left: 630px;
+		top: 172px;
+
+		font-family: Inconsolata;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 19px;
+		display: flex;
+		align-items: center;
+
+		color: #5C5E51;
+	}
+	.poem p {
+		position: absolute;
+		width: 412px;
+		height: 39px;
+		left: 575px;
+		top: 500px;
+
+		font-family: Karla;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		display: flex;
+		align-items: center;
+
+		color: ##5C5E51;
+	}
+	textarea {
+  		display: block;
+ 		border: 1px solid #BBB;
+  		color: #444;
+  		font: Inconsolata, monospace; 
+  		font-size: 110%;
+  		transform: translate(102%, 190%);
+	}
+	button {
+  		margin-top: 10px;
+  		transform: translate(753%, 875%);
+	}
+	.back {
+	    position: fixed;
+	    width: 54.1px;
+	    height: 105.1px;
+	    left: 12%;
+	    top: 45%;
+	}
+	.next {
+	    position: fixed;
+	    width: 54.1px;
+	    height: 105.1px;
+	    left: 85%;
+	    top: 45%;
+	}
+</style>
+<body>
+	<div class='main'>
+		<h1>He had to be someone.</h1>
+		<p>Friends from London used to visit him in his<br>retreat, and for their sake he again took up<br>the role of the poet.</p>
+	</div>
+	<div class='poem'>
+		<p>when my love swears that she is made of truth</p>
+	  	<textarea id="textExample" rows="5" cols="60">
+I do believe her, though I know she lies,
+That she might think me some untutored youth,
+Unlearned in the world's false subtleties.
+	 	</textarea>
+  		<button onclick="animateText(textExample)">generate poem</button>
+	</div>
+	<!-- back -->
+		<a href="page-3.html">
+			<svg class='back' width="55" height="106" viewBox="0 0 55 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g clip-path="url(#clip0)">
+			<path d="M53.1001 3.05176e-05C53.0001 3.40003 52.2001 24 35.1001 39C20.8001 51.5 4.4001 52 0.100098 52C4.5001 52.4 21.8001 54.3 36.1001 69C50.2001 83.5 51.8001 100.6 52.1001 105" stroke="#5C5E51" stroke-width="2" stroke-miterlimit="10"/>
+			</g>
+			<defs>
+			<clipPath id="clip0">
+			<rect width="54.1" height="105.1" fill="white" transform="matrix(-1 0 0 1 54.1001 3.05176e-05)"/>
+			</clipPath>
+			</defs>
+			</svg>
+		</a>
+	<!-- next -->
+		<a href="page-5.html">
+			<svg class='next' width="55" height="106" viewBox="0 0 55 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g clip-path="url(#clip0)">
+			<path d="M1 105.1C1.1 101.7 1.9 81.1 19 66.1C33.3 53.6 49.7 53.1 54 53.1C49.6 52.7 32.3 50.8 18 36.1C3.9 21.6 2.3 4.49998 2 0.0999756" stroke="#5C5E51" stroke-width="2" stroke-miterlimit="10"/>
+			</g>
+			<defs>
+			<clipPath id="clip0">
+			<rect width="54.1" height="105.1" fill="white" transform="matrix(1 0 0 -1 0 105.1)"/>
+			</clipPath>
+			</defs>
+			</svg>
+		</a>
+</body>
+<script type="text/javascript">
+    function animateText(textArea) {
+      let text = textArea.value;
+      let to = text.length,
+        from = 0;
+
+      animate({
+        duration: 5000,
+        timing: bounce,
+        draw: function(progress) {
+          let result = (to - from) * progress + from;
+          textArea.value = text.substr(0, Math.ceil(result))
+        }
+      });
+    }
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+</script>
+</html>
