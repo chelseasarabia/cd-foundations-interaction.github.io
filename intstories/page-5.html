@@ -113,6 +113,30 @@
 	    left: 85%;
 	    top: 45%;
 	}
+	@media screen and (max-width:480px) {
+		html, body {
+			display:flex;
+			align-items:center;
+			height: 100vh; 
+		}
+		.tale {
+			height: 100%;
+			position: absolute;
+			left:60%;
+			top:30%;
+			width: auto;
+		}
+		.back {
+			transform: rotate(90deg);
+			top:2%;
+			left:45%;
+		}
+		.next {
+			transform: rotate(90deg);
+			top:85%;
+			left:45%;
+		}
+	}
 </style>
 <body>
 	<section class='section1'>
